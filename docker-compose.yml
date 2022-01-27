@@ -43,6 +43,8 @@ services:
     image: prom/prometheus:v2.25.2
     networks:
       - internal
+    expose:
+      - "9091"
     ports:
       - "9091:9090"
     volumes:
@@ -58,6 +60,11 @@ services:
       - internal
     ports:
       - '9102:9102'
+
+#  grafana:
+#    image: grafana/grafana-enterprise:8.2.0
+#    ports:
+#      - 3000:3000
 
 ########################################
 
